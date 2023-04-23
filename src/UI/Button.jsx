@@ -20,7 +20,9 @@ function Button({
     : "red";
   return (
     <button
-      className={`px-3 py-1.5 border border-${colorProvider}-600 bg-${colorProvider}-500 text-black`}
+      className={`${rounded && "rounded-full"} ${
+        outline && "outline outline-offset-2 outline-cyan-500"
+      } flex items-center px-3 py-1.5 border border-${colorProvider}-600 bg-${colorProvider}-500 text-black`}
       // className={`px-3 py-1.5 border border-yellow-600 bg-yellow-500 text-black`}
     >
       {children}
