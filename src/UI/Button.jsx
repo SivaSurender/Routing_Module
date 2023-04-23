@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 function Button({
   children,
-  primary = false,
-  secondary = false,
-  success = false,
-  warning = false,
-  danger = false,
-  outline = false,
-  rounded = false,
+  primary,
+  secondary,
+  success,
+  warning,
+  danger,
+  outline,
+  rounded,
 }) {
   return <button>{children}</button>;
 }
@@ -29,7 +29,9 @@ Button.propTypes = {
       Number(!!danger);
 
     if (propCount > 1) {
-      return new Error("Invalid prop type supplied");
+      return new Error(
+        "Only one of type primary, secondary , warning , success or danger can be true for one comp each"
+      );
     }
   },
   primary: PropTypes.bool,
