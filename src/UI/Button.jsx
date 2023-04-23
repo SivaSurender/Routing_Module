@@ -40,3 +40,11 @@ Button.propTypes = {
   outline: PropTypes.bool,
   rounded: PropTypes.bool,
 };
+Button.defaultProps = {
+  children: null,
+  primary: false,
+  secondary: false,
+  success: false,
+  warning: false,
+  danger: false,
+};
