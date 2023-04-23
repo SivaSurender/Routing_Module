@@ -1,7 +1,12 @@
+import Button from "./UI/Button";
+
 function App() {
   return (
     <>
-      <p>Hi</p>
+      <Button primary>Test One</Button>
+      <Button>Test Two</Button>
+      <Button>Test Three</Button>
+      <Button>Test Four</Button>
     </>
   );
 }
