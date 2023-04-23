@@ -1,4 +1,15 @@
-import "./index.css";
+import Button from "./UI/Button";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="">
+      <Button primary>Click Me</Button>
+      <Button secondary>Clicker me again</Button>
+      <Button success> Test one</Button>
+      <Button warning>Test two</Button>
+      <Button danger> Test three</Button>
+      <Button outline> Test three</Button>
+      <Button rounded> Test three</Button>
+    </div>
+  );
 }

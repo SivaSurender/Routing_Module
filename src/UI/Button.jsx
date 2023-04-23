@@ -9,7 +9,23 @@ function Button({
   outline,
   rounded,
 }) {
-  return <button>{children}</button>;
+  const colorProvider = primary
+    ? "blue"
+    : secondary
+    ? "emerald"
+    : success
+    ? "green"
+    : warning
+    ? "yellow"
+    : "red";
+  return (
+    <button
+      className={`px-3 py-1.5 border border-${colorProvider}-600 bg-${colorProvider}-500 text-black`}
+      // className={`px-3 py-1.5 border border-yellow-600 bg-yellow-500 text-black`}
+    >
+      {children}
+    </button>
+  );
 }
 
 export default Button;
