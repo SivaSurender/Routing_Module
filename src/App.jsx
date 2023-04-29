@@ -13,13 +13,21 @@ export default function App() {
   return (
     <div>
       <div>
-        <Button primary outline>
+        <Button
+          primary
+          onClick={() => console.log("clicked")}
+          className="mb-4 "
+        >
           <AiFillAlert />
           Click Me
         </Button>
       </div>
       <div>
-        <Button secondary>
+        <Button
+          secondary
+          onMouseEnter={() => console.log("mouse entered")}
+          onMouseLeave={() => console.log("mouse left")}
+        >
           <AiFillAccountBook />
           Clicker me again
         </Button>
