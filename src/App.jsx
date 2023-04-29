@@ -1,64 +1,32 @@
-import Button from "./UI/Button";
-import {
-  AiFillAlert,
-  AiFillAccountBook,
-  AiFillCompass,
-  AiFillFire,
-  AiFillPrinter,
-  AiFillPayCircle,
-  AiFillTwitterCircle,
-} from "react-icons/ai";
+import Accordion from "./UI/Accordion";
+
+const item = [
+  {
+    id: "sdfs43",
+    label: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ullam distinctio atque vel. Dicta delectus molestias deserunt corporis. Debitis deserunt officiis, cum beatae voluptate incidunt tenetur veritatis culpa labore voluptas",
+  },
+
+  {
+    id: "343dsdf",
+    label: "content2",
+    content:
+      " Debitis, minus voluptate ex, animi blanditiis nobis alias tenetur error laboriosam illum maiores. Cupiditate debitis consequatur et adipisci quas magnam consectetur eni",
+  },
+
+  {
+    id: "sad687",
+    label: "content3",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id perspiciatis cum nam iure nulla ab omnis. Aliquam enim cum laborum. Cupiditate nisi aut numquam, nam molestiae aperiam rerum quam!",
+  },
+];
 
 export default function App() {
   return (
     <div>
-      <div>
-        <Button
-          primary
-          onClick={() => console.log("clicked")}
-          className="mb-4 "
-        >
-          <AiFillAlert />
-          Click Me
-        </Button>
-      </div>
-      <div>
-        <Button
-          secondary
-          onMouseEnter={() => console.log("mouse entered")}
-          onMouseLeave={() => console.log("mouse left")}
-        >
-          <AiFillAccountBook />
-          Clicker me again
-        </Button>
-      </div>
-      <div>
-        <Button success>
-          <AiFillCompass /> Test one
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <AiFillFire />
-          Test two
-        </Button>
-      </div>
-      <div>
-        <Button danger>
-          <AiFillPrinter /> Test three
-        </Button>
-      </div>
-      <div>
-        <Button outline>
-          <AiFillPayCircle /> Test four
-        </Button>
-      </div>
-      <div>
-        <Button rounded outline>
-          <AiFillTwitterCircle />
-          Test three
-        </Button>
-      </div>
+      <Accordion item={item} />
     </div>
   );
 }
