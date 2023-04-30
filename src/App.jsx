@@ -9,7 +9,8 @@ function App() {
   ];
 
   return (
-    <div>
+    <div style={{ display: "flex" }}>
+      <Dropdown options={options} />
       <Dropdown options={options} />
     </div>
   );

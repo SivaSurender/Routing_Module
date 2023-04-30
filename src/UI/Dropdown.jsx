@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { GoChevronDown } from "react-icons/go";
 
 function Dropdown({ options }) {
+  // gettting refernce to parent div of dropdown
+
+  const dropDownEl = useRef();
+
   const [dropDownData, setDropDownData] = useState({
     isDropOpen: false,
     selectedValue: "",
@@ -22,8 +26,29 @@ function Dropdown({ options }) {
       return { ...prev, selectedValue: option.label };
     });
   };
+
+  useEffect(() => {
+    const addHandler = (event) => {
+      // to handle scenario if div which is referenced is conditionally rendered
+      if (!dropDownEl.current) return;
+
+      // actual scenario to detect outside clicks
+
+      if (!dropDownEl.current.contains(event.target)) {
+        setDropDownData((prev) => {
+          return { ...prev, isDropOpen: false };
+        });
+      }
+    };
+    document.addEventListener("click", addHandler, true);
+
+    return () => {
+      document.removeEventListener("click", addHandler);
+    };
+  }, []);
+
   return (
-    <div className="w-48 relative">
+    <div ref={dropDownEl} className="w-48 relative">
       <div
         className="flex justify-between items-center cursor-pointer border rounded p-3 shadow bg-white w-full"
         onClick={() => dropHandler()}
