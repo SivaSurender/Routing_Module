@@ -31,6 +31,7 @@ function NavigationProvider({ children }) {
   );
 }
 
+// custom hook
 const useNavigation = () => {
   return useContext(NavigationContext);
 };
