@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown from "./UI/Dropdown";
+import Dropdown from "../UI/Dropdown";
 
 function DropDownPage() {
   const options = [
