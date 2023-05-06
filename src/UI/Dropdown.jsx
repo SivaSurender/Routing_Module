@@ -3,7 +3,6 @@ import { GoChevronDown } from "react-icons/go";
 
 function Dropdown({ options }) {
   // gettting refernce to parent div of dropdown
-
   const dropDownEl = useRef();
 
   const [dropDownData, setDropDownData] = useState({
