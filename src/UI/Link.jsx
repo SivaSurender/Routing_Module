@@ -4,10 +4,14 @@ import { useNavigation } from "../context/Context";
 function Link({ children, to }) {
   const { navigateHandler } = useNavigation();
   const linkHandler = (event) => {
-    event.preventDefault();
+    !event.ctrlKey && !event.metaKey && event.preventDefault();
     navigateHandler(to);
   };
-  return <a onClick={() => linkHandler(event)}>{children}</a>;
+  return (
+    <a href={to} onClick={() => linkHandler(event)}>
+      {children}
+    </a>
+  );
 }
 
 export default Link;
