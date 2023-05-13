@@ -5,7 +5,7 @@ import Modal from "../UI/Modal";
 function ModalPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div>
+    <div className="relative">
       <Button primary onClick={() => setIsModalOpen(true)}>
         Open Modal
       </Button>
