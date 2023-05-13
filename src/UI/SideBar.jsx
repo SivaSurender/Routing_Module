@@ -6,6 +6,7 @@ function SideBar() {
     { label: "Acccordion", path: "/accordion" },
     { label: "Button", path: "/button" },
     { label: "DropDown", path: "/" },
+    { label: "Modal", path: "/modal" },
   ];
   return (
     <div>
