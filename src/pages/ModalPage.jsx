@@ -9,7 +9,7 @@ function ModalPage() {
       <Button primary onClick={() => setIsModalOpen(true)}>
         Open Modal
       </Button>
-      {isModalOpen && <Modal />}
+      {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
     </div>
   );
 }
