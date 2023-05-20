@@ -7,10 +7,12 @@ const data = [
   { name: "lime", color: "bg-green-500", score: 4 },
 ];
 
+const dataConfig = [{ label: "Name" }, { label: "Color" }, { label: "Score" }];
+
 function TablePage() {
   return (
     <>
-      <Table data={data} />
+      <Table data={data} dataConfig={dataConfig} />
     </>
   );
 }

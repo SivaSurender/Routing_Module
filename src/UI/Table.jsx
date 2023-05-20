@@ -1,13 +1,17 @@
 import React from "react";
 
-function Table({ data }) {
+function Table({ data, dataConfig }) {
+  const renderElements = dataConfig.map((each, index) => {
+    return <th key={index}>{each.label}</th>;
+  });
   return (
     <table className="table-auto border-spacing-2">
       <thead>
         <tr className="border-b-2">
-          <th>Fruit</th>
+          {/* <th>Fruit</th>
           <th>Color</th>
-          <th>Score</th>
+          <th>Score</th> */}
+          {renderElements}
         </tr>
       </thead>
       <tbody>
