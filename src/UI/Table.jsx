@@ -1,7 +1,7 @@
 import React from "react";
 
 function Table({ data, dataConfig }) {
-  const renderElements = dataConfig.map((each, index) => {
+  const renderHeaders = dataConfig.map((each, index) => {
     return <th key={index}>{each.label}</th>;
   });
   return (
@@ -11,7 +11,7 @@ function Table({ data, dataConfig }) {
           {/* <th>Fruit</th>
           <th>Color</th>
           <th>Score</th> */}
-          {renderElements}
+          {renderHeaders}
         </tr>
       </thead>
       <tbody>
