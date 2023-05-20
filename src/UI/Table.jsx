@@ -18,11 +18,11 @@ function Table({ data, dataConfig }) {
         {data.map((each, index) => {
           return (
             <tr className="border-b" key={index}>
-              <td className="p-3">{each.name}</td>
+              <td className="p-3">{dataConfig[0]?.render(each)}</td>
               <td className="p-3">
-                <div className={`p-3 m-2 ${each.color}`}></div>
+                <div className={`p-3 m-2 ${dataConfig[1]?.render(each)}`}></div>
               </td>
-              <td className="p-3">{each.score}</td>
+              <td className="p-3">{dataConfig[2]?.render(each)}</td>
             </tr>
           );
         })}
