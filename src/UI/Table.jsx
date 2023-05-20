@@ -7,22 +7,19 @@ function Table({ data, dataConfig }) {
   return (
     <table className="table-auto border-spacing-2">
       <thead>
-        <tr className="border-b-2">
-          {/* <th>Fruit</th>
-          <th>Color</th>
-          <th>Score</th> */}
-          {renderHeaders}
-        </tr>
+        <tr className="border-b-2">{renderHeaders}</tr>
       </thead>
       <tbody>
         {data.map((each, index) => {
           return (
             <tr className="border-b" key={index}>
-              <td className="p-3">{dataConfig[0]?.render(each)}</td>
-              <td className="p-3">
-                <div className={`p-3 m-2 ${dataConfig[1]?.render(each)}`}></div>
-              </td>
-              <td className="p-3">{dataConfig[2]?.render(each)}</td>
+              {dataConfig.map((eachData, index) => {
+                return (
+                  <td key={index} className="p-3">
+                    {eachData?.render(each)}
+                  </td>
+                );
+              })}
             </tr>
           );
         })}
