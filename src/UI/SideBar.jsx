@@ -7,6 +7,7 @@ function SideBar() {
     { label: "Button", path: "/button" },
     { label: "DropDown", path: "/" },
     { label: "Modal", path: "/modal" },
+    { label: "Table", path: "/table" },
   ];
   return (
     <div>
