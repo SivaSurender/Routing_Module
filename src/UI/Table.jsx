@@ -1,6 +1,8 @@
 import React from "react";
 
 function Table({ data, dataConfig }) {
+  const { useState } = React;
+  console.log(useState);
   const renderHeaders = dataConfig.map((each, index) => {
     return <th key={index}>{each.label}</th>;
   });
